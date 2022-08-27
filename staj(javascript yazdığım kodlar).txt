@@ -1,0 +1,830 @@
+STAJ BOYUNCA YAZDIĞIM KODLAR (JAVASCRİPT ÖĞRENMEK İÇİN)
+------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset=UTF-8>
+</head>
+<body>
+     <script>
+var a,b;
+a=10;  b=30;  c=a+b;
+document.write("mehaba ben altuğ<br>İşlemin toplam sonucu:");
+document.write(c);
+     
+     </script>
+javascript öğrenmeye çalışıyorum
+<button onclick='document.getElementById("mesaj").innerHTML="en iyi sensin"'>Buraya Tıkla</button>
+<p id="mesaj"></p>
+
+
+
+
+
+</body> 
+</html>
+----------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+
+<script>
+var a,b;
+a=70;
+b=20;
+// kod tekrarı, döngü 
+// başlangıç , koşul, adım
+ var toplam=0;
+ for( i = 100; i>90; i--){
+ document.write(i);
+  document.write("<hr>");
+ toplam += i;
+ } 
+document.write(toplam);
+
+
+</script>
+
+sonuç
+
+</body>
+</html>
+---------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset=UTF-8>
+</head>
+<body>
+     <script>
+var a,b;
+a=70;  
+b=20;
+c=a+b-5*8/2
+
+if(a < 70);{         
+document.write("kucuk");
+
+}else if(a == 70){
+documnet.write("esit");
+
+}else {
+document.write("buyuk");
+}                    
+     
+     </script>
+
+
+</body> 
+</html>
+------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+
+<script>
+
+
+function topla(a,b){
+if(a>10)
+return a+b;
+else
+return a-b;
+}
+document.write(topla(1,10));
+
+
+
+//f(x) = x+5
+//f(7)-> 12
+
+//f(a,b) = a + b
+//f (2, 3) = 2+3->5
+</script>
+
+
+
+
+
+
+</body>
+</html>
+---------------------------------------------------------------------------------
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+              
+      <table border = 1>
+      <tr><td>Sayı</td><td>Faktöriyeli</td></tr>    
+      
+      <script>
+     
+    function fact(a){
+    var carpim =1;
+    for(j = 1; j<=a; j++) //faktöriyeli hesaplatan işlem 
+    carpim = carpim*j;
+    return carpim;
+    } 
+    
+    function fact2(a) { // recursive
+    if (a==0)
+    return 1;
+    return a*fact2(a-1);   
+    
+    }
+    
+     for( i=1; i<10; i++){
+       document.write("<tr><td>"+i+"</td><td>"+fact(i)+ "</td></tr>");
+       }
+        
+      //<tr> komutu satır açmaya yarar <td> ise o satırda bir kolon açmaya yarıyor
+      </script> 
+      </table>
+
+
+</body>
+</html>
+-------------------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+              
+      <table border = 1>
+     
+      
+      <script>
+     
+    // carpim tablosu
+    
+     document.write("<table border = 1>");
+     for( i=1; i<20; i++){  // satir
+       document.write("<tr>")
+       for(j=1;j<20;j++) {   // sutun
+       
+   document.write("<td>"+i*j+"</td><td>");
+      
+      
+      
+      }
+      document.write("</tr>");   
+         }
+    document.write("</table>");
+    
+    
+    
+    
+    //<tr> komutu satır açmaya yarar <td> ise o satırda bir kolon açmaya yarıyor
+      </script> 
+      </table>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="tuval" width="550" height="470" style="border:5px solid;">
+bu browser canvas desteklemiyor
+</canvas>
+<script>
+  var tuval=document.getElementById("tuval");// canvastaki tuvali çağırıyoruz ve tanımlıyoruz buraya?
+  var cizim=tuval.getContext("2d");//çizimle ilgili fonksşyonları tanımlamamızı sağlıyor. (2d) seçtiğimiz şeyde 2 boyutlu çizim ortamını almamızı sağlar   
+cizim.beginPath();//çizimin başladığını bu komut ile söylüyoruz
+cizim.moveTo(0,0);//girdiğimiz koordinatlardan bir pad tanımlarız x ve y olarak düşünebilirz (0,0) sol üst köşe oluyor
+cizim.lineTo(240,240);//çizdiriceğimiz yeri belirleriz
+cizim.lineTo(0,470);
+cizim.moveTo(550,0);
+cizim.lineTo(240,240);
+cizim.lineTo(550,470);
+cizim.stroke();//stroke komutu olmadan çalıştırmaz
+
+</script>
+</body>
+</html>
+----------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="tuval" width="550" height="470" style="border:5px solid;">
+bu browser canvas desteklemiyor
+</canvas>
+<script>
+  var tuval=document.getElementById("tuval");// canvastaki tuvali çağırıyoruz ve tanımlıyoruz buraya?
+  var cizim=tuval.getContext("2d");//çizimle ilgili fonksşyonları tanımlamamızı sağlıyor. (2d) seçtiğimiz şeyde 2 boyutlu çizim ortamını almamızı sağlar   
+cizim.beginPath();//çizimin başladığını bu komut ile söylüyoruz
+cizim.moveTo(0,0);//girdiğimiz koordinatlardan bir pad tanımlarız x ve y olarak düşünebilirz (0,0) sol üst köşe oluyor
+cizim.lineTo(300,300);//çizdiriceğimiz yeri belirleriz
+cizim.lineTo(400,300);
+cizim.moveTo(400,0);
+cizim.lineTo(500,100);
+cizim.moveTo(350,200);
+cizim.arc(300,200,50,0,2*Math.PI);// belirtilen bir açıyla daire çizmemize yarıyor
+cizim.font ="30px Arial";
+cizim.fillText("ALTUG YALCİN", 220,340);//istediğimiz koordinatlara yazı yazdırmamızı sağlar
+cizim.fillRect(300,400,150,70); // x,y, width ,height
+cizim.stroke();//stroke komutu olmadan çalıştırmaz
+
+</script>
+</body>
+</html>
+--------------------------------------------------------------------------------------------
+!DOCTYPE html>
+<html>
+<body>
+<canvas id="tuval" width="550" height="470" style="border:5px solid;">
+bu browser canvas desteklemiyor
+</canvas>
+<script>
+  var tuval=document.getElementById("tuval");// canvastaki tuvali çağırıyoruz ve tanımlıyoruz buraya?
+  var cizim=tuval.getContext("2d");//çizimle ilgili fonksşyonları tanımlamamızı sağlıyor.(2d) seçtiğimiz şeyde 2 boyutlu çizim ortamını almamızı sağlar   
+
+
+tuval.addEventListener('click', function (e){ //yazılan event'lar burda çalışır
+cizim.beginPath(); //çizim işleminin başlicağı komut anlamına geliyor.
+cizim.arc(e.x,e.y,50,0,2*Math.PI);
+cizim.stroke();  
+
+}
+);
+
+
+
+
+cizim.beginPath();//çizim işleminin başlicağı komut anlamına geliyor.
+cizim.moveTo(0,0);//girdiğimiz koordinatlardan bir pad tanımlarız x ve y olarak düşünebilirz (0,0) sol üst köşe oluyor
+cizim.lineTo(300,300);//çizdiriceğimiz yeri belirleriz
+cizim.lineTo(400,300);
+cizim.moveTo(400,0);
+cizim.lineTo(500,100);
+cizim.moveTo(350,200);
+cizim.arc(300,200,50,0,2*Math.PI);// belirtilen bir açıyla daire çizmemize yarıyor
+cizim.font ="30px Arial";
+cizim.fillText("ALTUG YALCİN", 220,340);//istediğimiz koordinatlara yazı yazdırmamızı sağlar
+cizim.fillRect(300,400,150,70); // x,y, width ,height
+cizim.stroke();//stroke komutu olmadan çalıştırmaz
+
+</script>
+</body>
+</html>
+-------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="tuval" width="550" height="470" style="border:5px solid;">
+bu browser canvas desteklemiyor
+</canvas>
+<script>
+  
+  function tiklama(e){
+  
+cizim.beginPath(); //
+cizim.arc(e.x,e.y,10,0,2*Math.PI);//
+cizim.stroke();  //
+  
+  
+  
+  
+  } 
+  var tuval=document.getElementById("tuval");// canvastaki tuvali çağırıyoruz ve tanımlıyoruz buraya?
+  var cizim=tuval.getContext("2d");//çizimle ilgili fonksşyonları tanımlamamızı sağlıyor.(2d) seçtiğimiz şeyde 2 boyutlu çizim ortamını almamızı sağlar   
+
+
+tuval.addEventListener('mousemove',tiklama)  //event'lar  çalışır
+
+
+
+
+
+
+
+cizim.beginPath();//çizimin başladığını bu komut ile söylüyoruz
+cizim.moveTo(0,0);//girdiğimiz koordinatlardan bir pad tanımlarız x ve y olarak düşünebilirz (0,0) sol üst köşe oluyor
+cizim.lineTo(300,300);//çizdiriceğimiz yeri belirleriz
+cizim.lineTo(400,300);
+cizim.moveTo(400,0);
+cizim.lineTo(500,100);
+cizim.moveTo(350,200);
+cizim.arc(300,200,50,0,2*Math.PI);// belirtilen bir açıyla daire çizmemize yarıyor
+cizim.font ="30px Arial";
+cizim.fillText("ALTUG YALCİN", 220,340);//istediğimiz koordinatlara yazı yazdırmamızı sağlar
+cizim.fillRect(300,400,150,70); // x,y, width ,height
+cizim.stroke();//stroke komutu olmadan çalıştırmaz
+
+</script>
+</body>
+</html>
+-----------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="tuval" width="550" height="470" style="border:5px solid;">
+bu browser canvas desteklemiyor
+</canvas>
+<script>
+  function temizle(){
+  cizim.beginPath(); 
+cizim.fillStyle="#ffffff";//RGB 000000
+cizim.fillRect(0,0,tuval.width,tuval.height);
+cizim.closePath();
+cizim.fill();
+
+  }
+  
+  
+  
+  
+  function tiklama(e){  
+temizle();
+cizim.beginPath(); //
+cizim.arc(e.x,e.y,10,0,2*Math.PI);//
+cizim.closePath();
+cizim.fillStyle="#ff0000";//RGB 000000
+cizim.fill();
+
+
+  
+  
+  
+  
+  } 
+  var tuval=document.getElementById("tuval");// canvastaki tuvali çağırıyoruz ve tanımlıyoruz buraya?
+  var cizim=tuval.getContext("2d");//çizimle ilgili fonksşyonları tanımlamamızı sağlıyor.(2d) seçtiğimiz şeyde 2 boyutlu çizim ortamını almamızı sağlar   
+
+
+tuval.addEventListener('mousemove',tiklama);//event'lar  çalışır
+
+
+
+
+
+
+
+cizim.beginPath();//çizimin başladığını bu komut ile söylüyoruz
+cizim.moveTo(0,0);//girdiğimiz koordinatlardan bir pad tanımlarız x ve y olarak düşünebilirz (0,0) sol üst köşe oluyor
+cizim.lineTo(300,300);//çizdiriceğimiz yeri belirleriz
+cizim.lineTo(400,300);
+cizim.moveTo(400,0);
+cizim.lineTo(500,100);
+cizim.moveTo(350,200);
+cizim.arc(300,200,50,0,2*Math.PI);// belirtilen bir açıyla daire çizmemize yarıyor
+cizim.font ="30px Arial";
+cizim.fillText("ALTUG YALCİN", 220,340);//istediğimiz koordinatlara yazı yazdırmamızı sağlar
+cizim.fillRect(300,400,150,70); // x,y, width ,height
+cizim.stroke();//stroke komutu olmadan çalıştırmaz
+
+</script>
+</body>
+</html>
+------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+
+<script>
+
+var yas=20;
+var yil=10;
+document.write("Altuğ "+yas+" yaşında "+yil+" yıl sonra "+(yil+yas)+" yaşında olucak ");
+
+
+
+</script>
+
+
+
+</body>
+</html>
+-----------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+
+<script>
+function deneme() {alert("fonksiyon123");}
+deneme();
+//<input type="button"value="Buraya Tıklayın" onclick="deneme()"  
+</script>
+
+
+
+</body>
+</html>
+--------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+
+<script>
+function kimlik(ad,soyad){
+document.write("Merhaba,benim adım:"+ad+" soyadım:"+soyad+"<br/>");
+}
+kimlik ("altuğ","yalçın");
+kimlik ("furkan","dibet");
+kimlik ("izzet","sekmen");
+
+
+
+
+
+/*function yas(x) { // parametre kullanılmış  örnek 
+document.write ("Merhaba kullanici,benim yasim: "+x);} 
+yas(25);
+*/
+</script>
+
+
+
+
+</body>
+</html>
+--------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+
+<script>
+function kimlik(ad,soyad){
+document.write("Merhaba,benim adım:<b>"+ad+" </b>soyadım: <em>"+soyad+"</em> <br/>");
+}
+kimlik ("altuğ","yalçın");
+kimlik ("furkan","dibet");
+kimlik ("izzet","sekmen");
+
+
+
+
+
+/*function yas(x) { // parametre kullanılmış  örnek 
+document.write ("Merhaba kullanici,benim yasim: "+x);} 
+yas(25);
+*/
+</script>
+
+
+
+
+</body>
+</html>
+-----------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+
+<script>
+function deneme (x) {return x*x;} 
+alert (deneme(6));
+
+
+
+
+/*function kimlik(ad,soyad){
+document.write("Merhaba,benim adım:<b>"+ad+" </b>soyadım: <em>"+soyad+"</em> <br/>");
+}
+kimlik ("Altuğ","Yalçın");
+kimlik ("Furkan","Dibet");
+kimlik ("İzzet","Sekmen");
+*/
+
+
+
+
+/*function yas(x) { // parametre kullanılmış  örnek 
+document.write ("Merhaba kullanici,benim yasim: "+x);} 
+yas(25);
+*/
+</script>
+
+
+
+
+</body>
+</html>
+------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+
+<script>
+function deneme (x) {return x*x;} 
+//document.write(deneme(6));
+//alert (deneme(6));// böylede yapılabilir
+
+
+function ikinci_deneme (y) {alert (y*y*y);}
+ikinci_deneme(deneme (4));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*function kimlik(ad,soyad){
+document.write("Merhaba,benim adım:<b>"+ad+" </b>soyadım: <em>"+soyad+"</em> <br/>");
+}
+kimlik ("Altuğ","Yalçın");
+kimlik ("Furkan","Dibet");
+kimlik ("İzzet","Sekmen");
+*/
+
+
+
+
+/*function yas(x) { // parametre kullanılmış  örnek 
+document.write ("Merhaba kullanici,benim yasim: "+x);} 
+yas(25);
+*/
+</script>
+
+
+
+
+</body>
+</html>
+-------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+
+<script>
+  function birinci() {document.write("ilk fonksiyonumu çalıştırıyorum !");}
+  function ikinci() {document.write("ikinci fonksiyonumu çalıştırıyorum !");}
+  function nihai() {birinci(); ikinci();}
+  nihai();
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+
+<script>
+  function birinci() {document.write("ilk fonksiyonumu çalıştırıyorum !");
+                      ikinci();}
+  function ikinci() {document.write("ikinci fonksiyonumu çalıştırıyorum !");
+                      birinci();}
+  
+  
+  birinci();
+    
+  //function nihai() {birinci(); ikinci();}
+  //nihai();
+</script>
+
+
+
+</body>
+</html>
+-----------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+
+<script>
+  var x=1;
+  function birinci(param) {document.write("ilk fonksiyonumu "+param+".defa çalıştırıyorum !");
+                      ikinci(param);}
+  function ikinci(param2) {document.write("ikinci fonksiyonumu "+param2+".defa çalıştırıyorum !");
+                      param2=param2+1;
+                      birinci(param2);}
+  
+  
+  birinci(x);
+    
+  //function nihai() {birinci(); ikinci();}
+  //nihai();
+</script>
+
+
+
+</body>
+</html>
+---------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+
+<script>
+
+var x=15;
+x++;
+var y=5;
+y-=3;
+//y=y-3
+document.write("merhaba aradığınız sayı: "+x)
+document.write("</br>merhaba aradığınız sayı: " +y)
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+
+<script>
+  var isim="altuğ";
+  if (isim == "altuğ")
+  {document.write("Sizin adiniz altuğ!");}
+  else
+    {document.write("Sizin adiniz altuğ değil!") ;}
+</script>
+
+
+
+</body>
+</html>
+-----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+<script>
+var ilksayi=3;
+var ikincisayi=5;
+if (ilksayi<=ikincisayi)
+{document.write("ilk sayı ikinci sayıdan küçük veya eşittir");}
+else 
+{document.write("ilk sayı daha büyüktür");}
+
+
+
+</script>
+
+</body>
+</html>
+---------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+
+<script>
+var ad="altuğ";
+var soyad="yalçn";
+   if (ad=="altuğ")
+   {if (soyad=="yalçın")    
+{document.write("aradığımız adı bulduk");}
+else 
+{document.write("isim doğru ama soyadı yanlış");}}
+else 
+{document.write("adınız yanlış soyadına bakmadım bile");}
+
+</script>
+
+
+
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+
+<script>
+var ad="altuğ";
+var soyad="ışık";
+
+if ((ad=="ceyda")&&(soyad=="ışık"))
+      {document.write("aradığımız kişiyi bulduk");}
+else  {if ((ad=="ceyda")||(soyad=="ışık"))
+      {document.write("ya isim ya da soyadı doğru");}
+else
+{document.write("ne isim ne de soyadı aynı!");}}
+ 
+
+</script>
+
+
+</body>
+</html>
+-------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+</head>
+<body>
+<script>
+var ders="XHTML";
+switch (ders)
+{
+case "javascript":
+          {document.write("yeni javascript dersimiz eklendi.");
+break;}
+case "XHTML":
+          {document.write("yeni XHTML dersmimiz eklendi.");
+break;}
+
+
+
+}
+
+</script>
+
+</body>
+</html>
+------------------------------------------------------------------------------------------------
+<h1>The Adventures of<br> Sherlock Holmes</h1>
+<br>
+<h3>by </h3>
+<br>
+<h2> Arthur Conan Doyle</h2>
+--------------------------------------------------------------------------------------
+<center>
+<hr size="3" noshade>
+<h1>The Adventures of<br> Sherlock Holmes</h1>
+<br>
+<h3>by </h3>
+<br>
+<h2> Arthur Conan Doyle</h2>
+<hr size="3" noshade>
+</center>
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
